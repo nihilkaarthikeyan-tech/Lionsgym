@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Plans &amp; Pricing — Lions Gym</title>
+  <meta name="description" content="Compare Lions Gym membership plans — Starter, Pro and Elite. Flexible monthly and annual pricing, no lock-in contracts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">LIONS<span>.</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Programs</a>
+        <a href="membership.html">Membership</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost">Enter The Den</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Membership</span>
+      <h1>Simple Plans. No Lock-In.</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span class="accent">Membership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing cards -->
+  <section>
+    <div class="container">
+      <div class="billing-switch reveal">
+        <span>Monthly</span>
+        <div class="switch">
+          <input type="checkbox" id="billing-toggle" />
+          <label for="billing-toggle"></label>
+        </div>
+        <span>Annual <span class="save-tag">Save 15%</span></span>
+      </div>
+
+      <div class="grid grid-3 stagger">
+        <div class="pricing-card reveal">
+          <span class="plan-name">Starter</span>
+          <div class="price">
+            <span class="currency">₹</span>
+            <span class="amount" data-monthly="1,999" data-annual="1,699">1,999</span>
+          </div>
+          <span class="billing-period">/ month</span>
+          <ul class="check-list">
+            <li>Full gym floor access</li>
+            <li>Standard hours (6 AM – 9 PM)</li>
+            <li>Locker access</li>
+            <li>1 free InBody scan / quarter</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-block">Choose Starter</a>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <span class="badge">Most Popular</span>
+          <span class="plan-name">Pro</span>
+          <div class="price">
+            <span class="currency">₹</span>
+            <span class="amount" data-monthly="2,999" data-annual="2,549">2,999</span>
+          </div>
+          <span class="billing-period">/ month</span>
+          <ul class="check-list">
+            <li>Everything in Starter</li>
+            <li>24/7 gym access</li>
+            <li>Unlimited group classes</li>
+            <li>Monthly InBody scan</li>
+            <li>1 personal training session / month</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary btn-block">Choose Pro</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <span class="plan-name">Elite</span>
+          <div class="price">
+            <span class="currency">₹</span>
+            <span class="amount" data-monthly="4,999" data-annual="4,249">4,999</span>
+          </div>
+          <span class="billing-period">/ month</span>
+          <ul class="check-list">
+            <li>Everything in Pro</li>
+            <li>4 personal training sessions / month</li>
+            <li>Custom nutrition plan</li>
+            <li>Priority class booking</li>
+            <li>Guest passes (2 / month)</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-block">Choose Elite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison table -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Compare Plans</span>
+        <h2>Find The Right Fit</h2>
+      </div>
+      <div class="compare-table-wrap reveal">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Starter</th>
+              <th class="featured-col">Pro</th>
+              <th>Elite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gym floor access</td>
+              <td><span class="yes">&#10003;</span></td>
+              <td><span class="yes">&#10003;</span></td>
+              <td><span class="yes">&#10003;</span></td>
+            </tr>
+            <tr>
+              <td>Access hours</td>
+              <td>6 AM – 9 PM</td>
+              <td>24/7</td>
+              <td>24/7</td>
+            </tr>
+            <tr>
+              <td>Group classes</td>
+              <td><span class="no">&#10005;</span></td>
+              <td>Unlimited</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>InBody scans</td>
+              <td>Quarterly</td>
+              <td>Monthly</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Personal training sessions</td>
+              <td><span class="no">&#10005;</span></td>
+              <td>1 / month</td>
+              <td>4 / month</td>
+            </tr>
+            <tr>
+              <td>Nutrition coaching</td>
+              <td><span class="no">&#10005;</span></td>
+              <td><span class="no">&#10005;</span></td>
+              <td><span class="yes">&#10003;</span></td>
+            </tr>
+            <tr>
+              <td>Guest passes</td>
+              <td><span class="no">&#10005;</span></td>
+              <td><span class="no">&#10005;</span></td>
+              <td>2 / month</td>
+            </tr>
+            <tr>
+              <td>Contract lock-in</td>
+              <td>None</td>
+              <td>None</td>
+              <td>None</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="grid grid-2 stagger">
+        <div class="card reveal">
+          <h3>Can I pause my membership?</h3>
+          <p>Yes — pause any plan for up to 30 days a year at no extra cost. Just let the front desk know.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Is there a joining fee?</h3>
+          <p>No hidden joining fees. The price you see is the price you pay, every month.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Can I upgrade my plan later?</h3>
+          <p>Absolutely. Upgrade or downgrade anytime — changes apply from your next billing cycle.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Do you offer student or corporate discounts?</h3>
+          <p>Yes, reach out to our team with valid ID or company details and we'll share applicable discounts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner reveal-scale">
+        <span class="eyebrow" style="justify-content:center;">No Fine Print In The Den</span>
+        <h2>Your Money Builds Muscle,<br />Nothing Else</h2>
+        <p>No joining fee, no lock-in, no hidden charges. Sweat first, decide after — your first session costs nothing.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Start With A Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">LIONS<span>.</span></a>
+          <p>Premium strength &amp; conditioning gym helping members train smarter, track progress, and build lasting habits.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Programs</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Membership</h4>
+          <ul>
+            <li><a href="membership.html">Plans &amp; Pricing</a></li>
+            <li><a href="schedule.html">Class Schedule</a></li>
+            <li><a href="contact.html">Claim First Session</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <address>
+            155, Nasiyanur Rd,<br />
+            Vivekanandar Salai, Manikampalayam,<br />
+            Erode, Tamil Nadu 638011<br /><br />
+            +91 90036 37009<br />
+            hello@lionsgym.in
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Lions Gym. All rights reserved.</span>
+        <span>Designed &amp; built for Lions Gym</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919003637009" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.607 1.902 6.47L4 29l7.73-1.865A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.87-1.33l-.35-.207-4.59 1.107 1.127-4.47-.23-.365A9.56 9.56 0 1 1 25.56 15c0 5.294-4.266 9.6-9.559 9.6zm5.24-7.17c-.287-.144-1.697-.837-1.96-.933-.263-.096-.454-.144-.646.144-.19.287-.74.933-.908 1.124-.167.192-.334.216-.62.072-.287-.144-1.211-.446-2.307-1.423-.853-.76-1.43-1.7-1.597-1.987-.167-.287-.018-.442.126-.585.13-.13.287-.335.43-.502.144-.167.192-.287.287-.478.096-.192.048-.36-.024-.503-.072-.144-.646-1.557-.885-2.132-.233-.56-.47-.484-.646-.493-.167-.008-.358-.01-.55-.01-.192 0-.503.072-.766.36-.263.287-1.005.982-1.005 2.395s1.029 2.778 1.172 2.97c.144.19 2.024 3.09 4.904 4.334.685.296 1.22.473 1.636.605.687.219 1.313.188 1.808.114.552-.082 1.697-.694 1.937-1.364.24-.67.24-1.244.167-1.364-.072-.12-.263-.192-.55-.336z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
