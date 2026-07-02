@@ -1,8 +1,20 @@
 // ==========================================================================
-// FORGE FITNESS — shared behaviour
+// LIONS GYM — shared behaviour
 // ==========================================================================
 
+// ── Announcement bar ──────────────────────────────────────────────────────
+// Edit the text/link below to change the offer shown on every page.
+// Set enabled to false to hide the bar entirely.
+const ANNOUNCEMENT = {
+  enabled: true,
+  text: "Launch offer — first session free, no joining fee this month",
+  link: "contact.html",
+  linkText: "Claim It",
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+  initAnnouncement();
+  initBmi();
   initHeaderScroll();
   initMobileNav();
   initActiveLink();
@@ -204,6 +216,76 @@ function initLightbox() {
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
+  });
+}
+
+/* Dismissible announcement bar across the top of every page */
+function initAnnouncement() {
+  if (!ANNOUNCEMENT.enabled || sessionStorage.getItem("announceDismissed")) return;
+
+  const bar = document.createElement("div");
+  bar.className = "announce-bar";
+  bar.innerHTML =
+    "<span>" + ANNOUNCEMENT.text + "</span>" +
+    (ANNOUNCEMENT.link ? '<a href="' + ANNOUNCEMENT.link + '">' + ANNOUNCEMENT.linkText + " &rarr;</a>" : "") +
+    '<button class="announce-close" aria-label="Dismiss">&times;</button>';
+  document.body.prepend(bar);
+  document.body.classList.add("has-announce");
+
+  const setHeight = () =>
+    document.documentElement.style.setProperty("--announce-h", bar.offsetHeight + "px");
+  setHeight();
+  window.addEventListener("resize", setHeight);
+
+  bar.querySelector(".announce-close").addEventListener("click", () => {
+    bar.remove();
+    document.body.classList.remove("has-announce");
+    sessionStorage.setItem("announceDismissed", "1");
+  });
+}
+
+/* BMI calculator on the home page */
+function initBmi() {
+  const btn = document.querySelector("#bmi-calc");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    const h = parseFloat(document.querySelector("#bmi-height").value);
+    const w = parseFloat(document.querySelector("#bmi-weight").value);
+    const result = document.querySelector("#bmi-result");
+    const numberEl = document.querySelector("#bmi-number");
+    const catEl = document.querySelector("#bmi-cat");
+    const noteEl = document.querySelector("#bmi-note");
+
+    if (!h || !w || h < 100 || h > 250 || w < 25 || w > 250) {
+      result.hidden = false;
+      numberEl.textContent = "—";
+      catEl.textContent = "Check your numbers";
+      noteEl.textContent = "Height should be 100–250 cm and weight 25–250 kg.";
+      return;
+    }
+
+    const bmi = w / Math.pow(h / 100, 2);
+    let cat, note;
+
+    if (bmi < 18.5) {
+      cat = "Underweight";
+      note = "Time to build. Structured strength work plus nutrition coaching puts on size the right way.";
+    } else if (bmi < 25) {
+      cat = "Healthy Range";
+      note = "Solid base. Now build real strength and muscle on top of it — that's where the fun starts.";
+    } else if (bmi < 30) {
+      cat = "Overweight";
+      note = "Nothing a few months in the den won't change. Coached lifting plus conditioning does the rest.";
+    } else {
+      cat = "Time To Start";
+      note = "The best day to start was yesterday. The second best is today — and your first session is on us.";
+    }
+
+    result.hidden = false;
+    numberEl.textContent = bmi.toFixed(1);
+    catEl.textContent = cat;
+    noteEl.textContent = note;
   });
 }
 

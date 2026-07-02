@@ -5,9 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lions Gym — Train Different</title>
   <meta name="description" content="Lions Gym is a premium strength & conditioning gym offering personal training, group classes, CrossFit and yoga. Book your free trial today." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Lions Gym Erode" />
+  <meta property="og:title" content="Lions Gym — Train Different" />
+  <meta property="og:description" content="Lions Gym is a premium strength & conditioning gym offering personal training, group classes, CrossFit and yoga. Book your free trial today." />
+  <meta property="og:url" content="https://lionsgym.vercel.app/" />
+  <meta property="og:image" content="https://lionsgym.vercel.app/assets/gallery/lions-gym-floor-1.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script defer src="/_vercel/insights/script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "Lions Gym",
+    "image": "https://lionsgym.vercel.app/assets/gallery/lions-gym-floor-1.webp",
+    "url": "https://lionsgym.vercel.app/",
+    "telephone": "+919003637009",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "155, Nasiyanur Rd, Vivekanandar Salai, Manikampalayam Housing Unit",
+      "addressLocality": "Erode",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "638011",
+      "addressCountry": "IN"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "174"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "05:30", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "05:30", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "21:00" }
+    ],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Sauna", "value": true }
+    ],
+    "sameAs": ["https://www.google.com/maps/place/lions+gym+erode"]
+  }
+  </script>
 </head>
 <body>
 
@@ -217,6 +259,38 @@
         <div class="reveal">
           <div class="num" data-target="12">0</div>
           <span>Years Running</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI calculator -->
+  <section>
+    <div class="container" style="max-width: 760px;">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Know Your Starting Point</span>
+        <h2>Check Your BMI</h2>
+        <p>Two numbers, three seconds. Whatever it says — the den has a plan for it.</p>
+      </div>
+      <div class="card reveal" style="padding: 38px 34px;">
+        <div class="form-row">
+          <div class="field">
+            <label for="bmi-height">Height (cm)</label>
+            <input type="number" id="bmi-height" min="100" max="250" placeholder="170" />
+          </div>
+          <div class="field">
+            <label for="bmi-weight">Weight (kg)</label>
+            <input type="number" id="bmi-weight" min="25" max="250" placeholder="70" />
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" id="bmi-calc" type="button">Calculate</button>
+        <div class="bmi-result" id="bmi-result" hidden>
+          <div class="bmi-value">
+            <span id="bmi-number">0</span>
+            <span class="bmi-cat" id="bmi-cat"></span>
+          </div>
+          <p id="bmi-note"></p>
+          <a href="contact.html" class="btn btn-ghost" style="margin-top: 16px;">Fix It At The Den</a>
         </div>
       </div>
     </div>
@@ -496,6 +570,15 @@
         <div class="hours-row"><span>Friday</span><span>9:00 AM – 9:00 PM</span></div>
         <div class="hours-row"><span>Saturday</span><span>9:00 AM – 9:00 PM</span></div>
       </div>
+    </div>
+    <div class="container mt-40">
+      <iframe
+        class="map-frame reveal"
+        src="https://www.google.com/maps?q=Lions+Gym,+155+Nasiyanur+Rd,+Vivekanandar+Salai,+Manikampalayam,+Erode,+Tamil+Nadu+638011&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Lions Gym location map">
+      </iframe>
     </div>
   </section>
 

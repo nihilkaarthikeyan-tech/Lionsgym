@@ -2009,6 +2009,100 @@ body.loaded .page-hero .breadcrumb { animation: fadeUp 0.8s var(--ease) 0.24s bo
   font-size: 0.95rem;
 }
 
+/* ----- BMI calculator ----- */
+
+.bmi-result {
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.bmi-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+#bmi-number {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.bmi-cat {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+#bmi-note {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* ----- Announcement bar ----- */
+
+.announce-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: var(--accent);
+  color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 9px 48px 9px 16px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.announce-bar a {
+  color: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.announce-close {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #0a0a0a;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+body.has-announce .site-header {
+  top: var(--announce-h, 38px);
+}
+
+body.has-announce .scroll-progress {
+  top: var(--announce-h, 38px);
+}
+
+body.has-announce .hero {
+  padding-top: calc(120px + var(--announce-h, 38px));
+}
+
+body.has-announce .page-hero {
+  padding-top: calc(170px + var(--announce-h, 38px));
+}
+
 /* ----- Ambient background ----- */
 
 /* Layered glows instead of flat black */
