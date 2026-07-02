@@ -388,17 +388,21 @@ function initCursor() {
   });
 }
 
-/* Subtle parallax drift on the hero image */
+/* Subtle parallax drift on the hero image, clamped so the frame never shows a gap */
 function initParallax() {
   const media = document.querySelector(".hero-media img");
   if (!media) return;
 
   const update = () => {
-    media.style.transform = "translateY(" + (window.scrollY * 0.08).toFixed(1) + "px) scale(1.08)";
+    // scale(1.08) leaves ~4% slack above the frame — never drift further than that
+    const max = media.offsetHeight * 0.035;
+    const ty = Math.min(window.scrollY * 0.06, max);
+    media.style.transform = "translateY(" + ty.toFixed(1) + "px) scale(1.08)";
   };
 
   update();
   window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
 }
 
 /* Fade out before navigating to another page of the site */
