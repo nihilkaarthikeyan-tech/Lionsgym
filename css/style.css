@@ -496,6 +496,12 @@ p {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding-top: 130px;
+    padding-bottom: 48px;
+  }
+
   .hero .container {
     grid-template-columns: 1fr;
   }
@@ -505,8 +511,23 @@ p {
   }
 
   .hero-stats {
-    gap: 28px;
+    gap: 18px;
     flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .hero-stats div {
+    flex: 1;
+    min-width: 90px;
+  }
+
+  .hero-stats div strong {
+    font-size: 1.7rem;
+  }
+
+  /* The absolute-positioned cue collides with stacked content on phones */
+  .scroll-cue {
+    display: none;
   }
 }
 
@@ -2231,6 +2252,12 @@ body {
   z-index: 1;
   pointer-events: none;
   white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .hero::after {
+    display: none;
+  }
 }
 
 /* Respect reduced-motion preferences */
